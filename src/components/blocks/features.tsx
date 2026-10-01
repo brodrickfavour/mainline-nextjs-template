@@ -9,16 +9,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Purpose-built for product development",
-    image: "/features/triage-card.svg",
+    title: "TRTHI Imapact attract smiles and gratitude",
+    image: "/features/tentaward.jpg",
   },
   {
-    title: "Manage projects end-to-end",
-    image: "/features/cycle-card.svg",
+    title: "TRHI are beyond the horizon of the borders",
+    image: "/features/tentborderless.jpg",
   },
   {
-    title: "Build momentum and healthy habits",
-    image: "/features/overview-card.svg",
+    title: "Building a hygienic and healthy environment for the people",
+    image: "/features/tentsocialenterprise.jpg",
   },
 ];
 
@@ -27,23 +27,37 @@ export const Features = () => {
     <section id="feature-modern-teams" className="pb-28 lg:pb-32">
       <div className="container">
         {/* Top dashed line with text */}
-        <div className="relative flex items-center justify-center">
+        {/* <div className="relative flex items-center justify-center">
           <DashedLine className="text-muted-foreground" />
           <span className="bg-muted text-muted-foreground absolute px-3 font-mono text-sm font-medium tracking-wide max-md:hidden">
             MEASURE TWICE. CUT ONCE.
           </span>
-        </div>
+        </div> */}
 
         {/* Content */}
-        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Made for modern product teams
-          </h2>
-          <p className="text-muted-foreground leading-snug">
-            Mainline is built on the habits that make the best product teams
-            successful: staying focused, moving quickly, and always aiming for
-            high-quality work.
-          </p>
+        <div className="mx-auto mt-10 grid max-w-4xl items-start gap-8 lg:mt-24 lg:grid-cols-[minmax(0,1fr)_minmax(320px,420px)]">
+          <div className="space-y-6">
+            <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
+              The Journey of <span className="text-primary">TheRedTent Health Initiative </span>
+            </h1>
+            <p className="text-muted-foreground leading-snug">
+              TheRedTent Health Initiative began with a vision to make sexual and reproductive health accessible. Our journey continues through community, advocacy, partnerships, and a commitment to advancing health, dignity, and choice.
+            </p>
+          </div>
+
+          <div className="-mx-6 w-[calc(100%+3rem)] lg:mx-0 lg:w-full">
+            <Card className="overflow-hidden rounded-none lg:rounded-3xl border border-border bg-background shadow-sm">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/OEAsuNHOcGY?autoplay=1&mute=1&controls=1"
+                  title="YouTube video"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </Card>
+          </div>
         </div>
 
         {/* Features Card */}
@@ -68,9 +82,9 @@ export const Features = () => {
                       "group flex items-center justify-between gap-4 pe-4 pt-4 md:pe-6 md:pt-6"
                     }
                   >
-                    <h3 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
+                    <h5 className="font-display max-w-60 text-2xl leading-tight font-bold tracking-tight">
                       {item.title}
-                    </h3>
+                    </h5>
                     <div className="rounded-full border p-2">
                       <ChevronRight className="size-6 transition-transform group-hover:translate-x-1 lg:size-9" />
                     </div>

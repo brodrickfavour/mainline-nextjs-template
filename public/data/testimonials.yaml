@@ -1,0 +1,47 @@
+testimonials:
+  - slug: amy-chase
+    quote: "We're misusing Mainline as a CRM and it still works!"
+    author: "Amy Chase"
+    role: "PM"
+    company: "Mercury Finance"
+    image: "/testimonials/amy-chase.webp"
+    summary: "How Amy's team uses Mainline beyond its intended workflow."
+    content:
+      - "We initially started using Mainline for product management."
+      - "As the team grew, we discovered that it could also support our customer relationship workflows."
+      - "The flexibility allowed us to keep more of our work in one place without introducing another system."
+
+  - slug: jonas-kotara
+    quote: "I was able to replace 80% of my team with Mainline bots."
+    author: "Jonas Kotara"
+    role: "Lead Engineer"
+    company: "Mercury Finance"
+    image: "/testimonials/jonas-kotara.webp"
+    summary: "How Jonas uses automation to reduce repetitive engineering work."
+    content:
+      - "Automation changed how our engineering team approached repetitive tasks."
+      - "Instead of manually handling every repetitive process, we were able to delegate a large portion of the workflow to Mainline bots."
+      - "This allowed the engineering team to spend more time on higher-value work."
+
+  - slug: kevin-yam
+    quote: "Founder Mode is hard enough without having a really nice PM app."
+    author: "Kevin Yam"
+    role: "Founder"
+    company: "Mercury Finance"
+    image: "/testimonials/kevin-yam.webp"
+    summary: "Why having a focused product management workflow matters for founders."
+    content:
+      - "Running a company means constantly switching between different priorities."
+      - "Having a focused product management workflow made it easier to keep the team aligned."
+      - "The right tools should remove complexity rather than create more of it."
+
+  - slug: kundo-marta
+    quote: "I can use the tool as a substitute from my PM."
+    author: "Kundo Marta"
+    role: "Founder"
+    company: "Mercury Finance"
+    image: "/testimonials/kundo-marta.webp"
+    summary: "How Kundo uses Mainline to support product management."
+    content:
+      - "Mainline gives me a way to keep track of product decisions without constantly needing another layer of coordination."
+      - "It has become a useful part of how I organise and move product work forward."

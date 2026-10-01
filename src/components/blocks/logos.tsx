@@ -17,86 +17,86 @@ export const Logos = () => {
   const topRowCompanies = [
     {
       name: "Mercury",
-      logo: "/logos/mercury.svg",
-      width: 143,
-      height: 26,
-      href: "https://mercury.com",
+      logo: "/logos/UNFPA.svg",
+      width: 300,
+      height: 80,
+      href: "",
     },
     {
       name: "Watershed",
-      logo: "/logos/watershed.svg",
-      width: 154,
-      height: 31,
-      href: "https://watershed.com",
+      logo: "/logos/MYSD.svg",
+      width: 300,
+      height: 80,
+      href: "",
     },
-    {
-      name: "Retool",
-      logo: "/logos/retool.svg",
-      width: 113,
-      height: 22,
-      href: "https://retool.com",
-    },
-    {
-      name: "Descript",
-      logo: "/logos/descript.svg",
-      width: 112,
-      height: 27,
-      href: "https://descript.com",
-    },
+    // {
+    //   name: "Retool",
+    //   logo: "/logos/retool.svg",
+    //   width: 113,
+    //   height: 22,
+    //   href: "https://retool.com",
+    // },
+    // {
+    //   name: "Descript",
+    //   logo: "/logos/descript.svg",
+    //   width: 112,
+    //   height: 27,
+    //   href: "https://descript.com",
+    // },
   ];
 
   const bottomRowCompanies = [
     {
       name: "Perplexity",
-      logo: "/logos/perplexity.svg",
-      width: 141,
-      height: 32,
-      href: "https://perplexity.com",
+      logo: "/logos/YNL.svg",
+      width: 200,
+      height: 50,
+      href: "",
     },
     {
       name: "Monzo",
-      logo: "/logos/monzo.svg",
-      width: 104,
-      height: 18,
-      href: "https://monzo.com",
+      logo: "/logos/JCILAGOS.svg",
+      width: 200,
+      height: 50,
+      href: "",
     },
     {
       name: "Ramp",
-      logo: "/logos/ramp.svg",
-      width: 105,
-      height: 28,
-      href: "https://ramp.com",
+      logo: "/logos/OFA.svg",
+      width: 300,
+      height: 50,
+      href: "",
     },
-    {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
-      width: 128,
-      height: 33,
-      href: "https://raycast.com",
-    },
-    {
-      name: "Arc",
-      logo: "/logos/arc.svg",
-      width: 90,
-      height: 28,
-      href: "https://arc.com",
-    },
+    // {
+    //   name: "Raycast",
+    //   logo: "/logos/raycast.svg",
+    //   width: 128,
+    //   height: 33,
+    //   href: "",
+    // },
+    // {
+    //   name: "Arc",
+    //   logo: "/logos/arc.svg",
+    //   width: 90,
+    //   height: 28,
+    //   href: "",
+    // },
   ];
 
   return (
     <section className="pb-28 lg:pb-32 overflow-hidden">
       <div className="container space-y-10 lg:space-y-16">
         <div className="text-center">
-          <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
+          <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl pt-10">
+            Meet those who have journeyed with us,
             <br className="max-md:hidden" />
             <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
+              shaping the future of SRHR for all.
             </span>
           </h2>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-8">
+        <div className="flex w-full flex-col items-center gap-1px] ">
           {/* Top row - 4 logos */}
           <LogoRow companies={topRowCompanies} gridClassName="grid-cols-4" />
 
@@ -121,26 +121,23 @@ type LogoRowProps = {
 const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
   return (
     <>
-      {/* Desktop static version */}
+      {/* Desktop marquee version (match mobile pattern) */}
       <div className="hidden md:block">
-        <div
-          className={cn(
-            "grid items-center justify-items-center gap-x-20 lg:gap-x-28",
-            gridClassName,
-          )}
-        >
-          {companies.map((company, index) => (
-            <Link href={company.href} target="_blank" key={index}>
-              <Image
-                src={company.logo}
-                alt={`${company.name} logo`}
-                width={company.width}
-                height={company.height}
-                className="dark:opacity/100 object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
-              />
-            </Link>
+        <Marquee direction={direction} pauseOnHover speed={60} gradient={false} className="w-full">
+          {[...companies, ...companies].map((company, index) => (
+            <div key={`${company.name}-${index}`} className="mx-0 inline-flex items-center justify-center">
+              <Link href={company.href} target="_blank">
+                <Image
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  width={company.width}
+                  height={company.height}
+                  className="object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
+                />
+              </Link>
+            </div>
           ))}
-        </div>
+        </Marquee>
       </div>
 
       {/* Mobile marquee version */}
@@ -151,7 +148,7 @@ const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
               href={company.href}
               target="_blank"
               key={index}
-              className="mx-8 inline-block transition-opacity hover:opacity-70"
+              className="mx-0 inline-block transition-opacity hover:opacity-70"
             >
               <Image
                 src={company.logo}

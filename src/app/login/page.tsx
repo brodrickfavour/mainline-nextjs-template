@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 
-const Login = () => {
+const Donate = () => {
   return (
     <Background>
       <section className="py-28 lg:pt-44 lg:pb-32">
@@ -79,4 +79,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Donate;

@@ -12,7 +12,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.92 0.04 86.47);
+  --primary:oklch(57.753% 0.23077 28.642);
   --primary-foreground: oklch(0.31 0.02 86.64);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -196,6 +196,39 @@
   padding-inline: 1.5rem;
   @media (width >= 1400px) {
     max-width: 1220px;
+  }
+}
+
+@media (width < 768px) {
+  .stats-card-mobile {
+    animation: stats-card-slide-in 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .stats-card-mobile:nth-child(2) {
+    animation-delay: 1200ms;
+  }
+
+  .stats-card-mobile:nth-child(3) {
+    animation-delay: 2400ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stats-card-mobile {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes stats-card-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
